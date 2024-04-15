@@ -203,7 +203,7 @@ class CustomCLIP(nn.Module):
         text_features = text_features / text_features.norm(dim=-1, keepdim=True)
 
         logit_scale = self.logit_scale.exp()
-        logits = logit_scale * image_features @ text_features.t()
+        logits = logit_scale * image_features @ text_features.t() # Text_features.t () can be regarded as the weight matrix of traditional classifiers.
 
         return logits
 

@@ -84,6 +84,8 @@ Summary of directory: output/caltech101/CoOp/rn50_16shots/nctx16_cscFalse_ctpend
 
 **How to visualize nearest words for the learned context tokens?** All you need is `interpret_prompt.py`. Say the learned tokens are saved in `a/b/c/prompt_learner/model.pth.tar` and you would like to see the top-3 nearest words for each token. In this case, run `python interpret_prompt.py a/b/c/prompt_learner/model.pth.tar 3`
 
+**How to visualize indicators through tensorboard?** `tensorboard --logdir=PATH --port=PORT --bind_all`
+
 ### Robustness to Distribution Shift
 To reproduce the robustness experiments, you can simply load the models learned on ImageNet and evaluate them on the following datasets: `imagenetv2`, `imagenet-sketch`, `imagenet-a` and `imagenet-r`.
 
